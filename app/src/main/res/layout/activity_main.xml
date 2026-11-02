@@ -8,11 +8,14 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <!-- Cabeçalho com largura responsiva -->
     <FrameLayout
         android:id="@+id/frameLayout"
-        android:layout_width="342dp"
+        android:layout_width="0dp"
         android:layout_height="160dp"
         android:layout_marginTop="4dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
         android:background="#3AB5B7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -24,10 +27,8 @@
             android:layout_height="match_parent"
             android:fontFamily="sans-serif-black"
             android:gravity="center"
-            android:text=" Quizzer - Fatec (inglês)"
+            android:text="Quizzer - Fatec (inglês)"
             android:textColor="#FFFFFF"
-            android:textColorLink="#F6F6F6"
-            android:textDirection="firstStrongRtl"
             android:textSize="24sp"
             android:textStyle="bold" />
     </FrameLayout>
@@ -36,35 +37,42 @@
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="32dp"
         android:text="Seja bem-vindo ao Quiz de inglês"
-        android:textSize="16sp"
+        android:textSize="18sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/frameLayout" />
 
+    <!-- Texto explicativo responsivo com quebra de linhas ajustada -->
     <TextView
         android:id="@+id/textView3"
-        android:layout_width="315dp"
-        android:layout_height="116dp"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
-        android:text="Teremos 5 perguntas de múltipla escolha, e dentre elas você deve escolher a alternativa correta. \n \n O objetivo deste quiz é a preparação para a matéria de inglês para o vestibular Fatec. \n \n Boa Sorte!"
-        android:textSize="12sp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Teremos 5 perguntas de múltipla escolha, e dentre elas você deve escolher a alternativa correta.\n\nO objetivo deste quiz é a preparação para a matéria de inglês para o vestibular Fatec.\n\nBoa Sorte!"
+        android:textSize="14sp"
+        android:lineSpacingExtra="4sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.484"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
+    <!-- Botão Iniciar Responsivo -->
     <Button
         android:id="@+id/button"
-        android:layout_width="296dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_marginTop="44dp"
+        android:layout_marginStart="32dp"
+        android:layout_marginEnd="32dp"
         android:backgroundTint="#2EC540"
         android:text="Iniciar Quiz"
-        android:textColorLink="#5BE927"
+        android:textColor="#FFFFFF"
         android:textSize="16sp"
+        android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />

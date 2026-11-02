@@ -1,32 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://android.com"
+    xmlns:app="http://android.com"
+    xmlns:tools="http://android.com"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pergunta3">
 
     <FrameLayout
-        android:layout_width="407dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/frameLayout3"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
         android:background="#3AB5B7"
-        android:backgroundTint="#3AB5B7"
-        android:foregroundTint="#3AB5B7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView6"
+            android:id="@+id/textViewTitle3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:lineSpacingExtra="16sp"
-            android:text="      Questão 3 (Fatec 2026)"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Questão 3 (Fatec 2026)"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
     </FrameLayout>
+
+    <TextView
+        android:id="@+id/textViewInfo3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Leia o texto para responder às perguntas 2 e 3:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout3" />
+
+    <TextView
+        android:id="@+id/textViewTextoBase3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:text="Rocket man (Elton John)\n\nI miss the Earth so much, I miss my wife\nIt’s lonely out in space\nOn such a timeless flight\n(…)\nMars ain’t the kind of place to raise your kids\nIn fact, it’s cold as hell\nAnd there’s no one there to raise them if you did"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewInfo3" />
+
+    <TextView
+        android:id="@+id/textViewEnunciado3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="A música de Elton John foi composta em 1972 e refere-se ao desenvolvimento da:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoBase3" />
+
+    <RadioGroup
+        android:id="@+id/radioGroupPergunta3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnunciado3">
+
+        <RadioButton
+            android:id="@+id/radioButton3A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(A) clonagem de seres humanos."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(B) inteligência artificial."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(C) engenharia genética."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(D) exploração espacial."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton3E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(E) internet."
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <!-- Botões de Navegação Inferiores -->
+    <Button
+        android:id="@+id/btnAnterior3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Anterior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnProximo3"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnProximo3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="Próxima"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAnterior3" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

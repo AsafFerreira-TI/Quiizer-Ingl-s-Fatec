@@ -1,34 +1,145 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://android.com"
+    xmlns:app="http://android.com"
+    xmlns:tools="http://android.com"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pergunta1">
 
+    <!-- Cabeçalho da Tela -->
     <FrameLayout
-        android:id="@+id/frameLayout2"
-        android:layout_width="407dp"
-        android:layout_height="97dp"
-        android:layout_marginTop="4dp"
+        android:id="@+id/frameLayout1"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
         android:background="#3AB5B7"
-        android:backgroundTint="#3AB5B7"
-        android:foregroundTint="#3AB5B7"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView4"
+            android:id="@+id/textViewTitle1"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical"
-            android:lineSpacingExtra="16sp"
-            android:text="      Questão 1 (Fatec 2026)"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Questão 1 (Fatec 2026)"
             android:textColor="#FFFFFF"
             android:textSize="24sp"
             android:textStyle="bold" />
     </FrameLayout>
+
+    <!-- Texto Base em Inglês -->
+    <TextView
+        android:id="@+id/textViewTextoBase1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:text="Zayu™ the Jaguar\n\nZayu the Jaguar, from the jungles of southern Mexico, embodies the rich heritage and vibrant spirit of the country. With a name inspired by unity, strength and joy, Zayu transforms on the pitch as a striker, showcasing exceptional ingenuity and agility that intimidates defenders. Off the pitch, Zayu embraces Mexican culture through dance, food and tradition, uniting people across borders with passion and pride. More than an athlete, Zayu is a symbol of cultural celebration and connection, carrying the heart of Mexico with pride."
+        android:textSize="13sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout1" />
+
+    <!-- Enunciado da Questão -->
+    <TextView
+        android:id="@+id/textViewEnunciado1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Zayu é um dos mascotes da Copa do Mundo de Futebol 2026. Representando o México, o jaguar Zayu retrata:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewTextoBase1" />
+
+    <!-- Alternativas Agrupadas -->
+    <RadioGroup
+        android:id="@+id/radioGroupPergunta1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textViewEnunciado1">
+
+        <RadioButton
+            android:id="@+id/radioButton1A"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="(A) ingenuidade, pureza e paixão."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton1B"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="(B) força, agilidade e criatividade."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton1C"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="(C) vibração, inspiração e inocência."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton1D"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="(D) união, regionalismo e exceção."
+            android:textSize="14sp" />
+
+        <RadioButton
+            android:id="@+id/radioButton1E"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="6dp"
+            android:text="(E) espírito, religião e fraternidade."
+            android:textSize="14sp" />
+    </RadioGroup>
+
+    <!-- Botões de Navegação Inferiores -->
+    <Button
+        android:id="@+id/btnAnterior1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Voltar"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnProximo1"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnProximo1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="Próxima"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAnterior1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

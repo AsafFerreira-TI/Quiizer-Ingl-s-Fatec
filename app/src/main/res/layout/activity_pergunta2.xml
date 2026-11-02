@@ -1,149 +1,155 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+<androidx.constraintlayout.widget.ConstraintLayout 
+    xmlns:android="http://android.com"
+    xmlns:app="http://android.com"
+    xmlns:tools="http://android.com"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".Pergunta2">
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/main"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        tools:context=".Pergunta1">
-
-        <FrameLayout
-            android:id="@+id/frameLayout2"
-            android:layout_width="407dp"
-            android:layout_height="97dp"
-            android:layout_marginTop="4dp"
-            android:background="#3AB5B7"
-            android:backgroundTint="#3AB5B7"
-            android:foregroundTint="#3AB5B7"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent">
-
-            <TextView
-                android:id="@+id/textView4"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:gravity="center_vertical"
-                android:lineSpacingExtra="16sp"
-                android:text="      Questão 2 (Fatec 2026)"
-                android:textColor="#FFFFFF"
-                android:textSize="24sp"
-                android:textStyle="bold" />
-        </FrameLayout>
+    <FrameLayout
+        android:id="@+id/frameLayout2"
+        android:layout_width="0dp"
+        android:layout_height="80dp"
+        android:background="#3AB5B7"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
 
         <TextView
-            android:id="@+id/textView10"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="Leia o texto para responder às perguntas 2 e 3"
-            android:textSize="16sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.493"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical"
+            android:paddingStart="24dp"
+            android:paddingEnd="24dp"
+            android:text="Questão 2 (Fatec 2026)"
+            android:textColor="#FFFFFF"
+            android:textSize="24sp"
+            android:textStyle="bold" />
+    </FrameLayout>
 
-        <TextView
-            android:id="@+id/textView11"
-            android:layout_width="352dp"
-            android:layout_height="155dp"
-            android:layout_marginTop="24dp"
-            android:text="                                    Rocket man (Elton John) \n \n I miss the Earth so much, I miss my wife \n It’s lonely out in space \n On such a timeless flight \n (…) \n Mars ain’t the kind of place to raise your kids \n In fact, it’s cold as hell \n And there’s no one there to raise them if you did"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.491"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView10" />
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Leia o texto para responder às perguntas 2 e 3:"
+        android:textSize="16sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/frameLayout2" />
 
-        <TextView
-            android:id="@+id/textView12"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="12dp"
-            android:text="Na última estrofe, a expressão in fact reforça que"
-            android:textSize="12sp"
-            android:textStyle="bold"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.204"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView11" />
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:background="#F5F5F5"
+        android:padding="12dp"
+        android:text="Rocket man (Elton John)\n\nI miss the Earth so much, I miss my wife\nIt’s lonely out in space\nOn such a timeless flight\n(…)\nMars ain’t the kind of place to raise your kids\nIn fact, it’s cold as hell\nAnd there’s no one there to raise them if you did"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10" />
 
-        <RadioButton
-            android:id="@+id/radioButton2"
-            android:layout_width="354dp"
-            android:layout_height="48dp"
-            android:layout_marginTop="8dp"
-            android:text="Marte não pode ser nosso lar, portanto, não poderemos criar nossos filhos lá."
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.442"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView12" />
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:text="Na última estrofe, a expressão in fact reforça que:"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView11" />
 
-        <RadioButton
-            android:id="@+id/radioButton3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Marte poderia, de fato, ser um substituto para o planeta \nTerra."
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.406"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton2" />
-
-        <RadioButton
-            android:id="@+id/radioButton4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Marte, no entanto, traz boas perspectivas para moradia."
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.388"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton3" />
+    <RadioGroup
+        android:id="@+id/radioGroupPergunta2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView12">
 
         <RadioButton
-            android:id="@+id/radioButton5"
-            android:layout_width="wrap_content"
+            android:id="@+id/radioButtonA"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Marte, apesar de frio, será nossa alternativa de lar."
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.273"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton4" />
+            android:padding="8dp"
+            android:text="(A) Marte não pode ser nosso lar, portanto, não poderemos criar nossos filhos lá."
+            android:textSize="13sp" />
 
         <RadioButton
-            android:id="@+id/radioButton6"
-            android:layout_width="wrap_content"
+            android:id="@+id/radioButtonB"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:text="Marte, na verdade, é frio demais para nos abrigar."
-            android:textSize="12sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.257"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton5" />
+            android:padding="8dp"
+            android:text="(B) Marte poderia, de fato, ser um substituto para o planeta Terra."
+            android:textSize="13sp" />
 
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="397dp"
-            android:layout_height="62dp"
-            android:layout_marginTop="36dp"
-            android:text="Avançar"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/radioButton6" />
+        <RadioButton
+            android:id="@+id/radioButtonC"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(C) Marte, no entanto, traz boas perspectivas para moradia."
+            android:textSize="13sp" />
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+        <RadioButton
+            android:id="@+id/radioButtonD"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(D) Marte, apesar de frio, será nossa alternativa de lar."
+            android:textSize="13sp" />
+
+        <RadioButton
+            android:id="@+id/radioButtonE"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="8dp"
+            android:text="(E) Marte, na verdade, é frio demais para nos abrigar."
+            android:textSize="13sp" />
+    </RadioGroup>
+
+    <!-- Botões de Navegação Inferiores -->
+    <Button
+        android:id="@+id/btnAnterior2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="8dp"
+        android:text="Anterior"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/btnProximo2"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnProximo2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="24dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="20dp"
+        android:text="Próxima"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/btnAnterior2" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
