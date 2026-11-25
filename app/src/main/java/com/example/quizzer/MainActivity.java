@@ -2,6 +2,10 @@ package com.example.quizzer;
 
 import android.os.Bundle;
 
+import android.content.Intent;
+import android.widget.Button;
+import android.view.View;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -10,9 +14,25 @@ import androidx.core.view.WindowInsetsCompat;
 
 public class MainActivity extends AppCompatActivity {
 
+    private Button btnIniciar;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        setContentView(R.layout.activity_main);
+
+        btnIniciar = findViewById(R.id.button);
+
+        btnIniciar.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                // Cria a intenção (Intent) de sair da MainActivity e ir para a Pergunta1
+                Intent intent = new Intent(MainActivity.this, Pergunta1.class);
+                startActivity(intent);
+            }
+        });
+
         EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
         ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
@@ -22,3 +42,4 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 }
+

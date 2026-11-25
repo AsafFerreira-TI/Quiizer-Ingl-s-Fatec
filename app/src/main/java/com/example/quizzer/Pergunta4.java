@@ -2,6 +2,13 @@ package com.example.quizzer;
 
 import android.os.Bundle;
 
+import android.content.Intent;
+import android.view.View;
+import android.widget.Button;
+import android.widget.RadioButton;
+import android.widget.RadioGroup;
+import android.widget.Toast;
+
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.graphics.Insets;
@@ -9,6 +16,59 @@ import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
 public class Pergunta4 extends AppCompatActivity {
+
+    private RadioGroup radioGroup;
+    private RadioButton radioCorreta;
+    private Button btnAnterior, btnProximo;
+
+    private int acertosAnteriores;
+
+    setContentView(R.layout.activity_pergunta4);
+
+        // 1. Pega a pontuação acumulada que veio da tela anterior (se não vier nada, assume 0)
+        acertosAnteriores = getIntent().getIntExtra("PONTUACAO", 0);
+
+        // 2. Vincula os componentes com os IDs do activity_pergunta4.xml
+        radioGroup = findViewById(R.id.radioGroupPergunta4);
+        
+        // Na Questão 4, a alternativa correta é a (E)
+        radioCorreta = findViewById(R.id.radioButton4E); 
+        
+        btnAnterior = findViewById(R.id.btnAnterior4);
+        btnProximo = findViewById(R.id.btnProximo4);
+
+        // 3. Botão "Anterior" (fecha a Pergunta 4 e volta para a Pergunta 3)
+        btnAnterior.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
+            }
+        });
+
+        // 4. Botão "Próxima"
+        btnProximo.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int idSelecionado = radioGroup.getCheckedRadioButtonId();
+
+                if (idSelecionado == -1) {
+                    Toast.makeText(Pergunta4.this, "Por favor, selecione uma alternativa!", Toast.LENGTH_SHORT).show();
+                } else {
+                    // Começa com a pontuação que já estava acumulada
+                    int acertosTotais = acertosAnteriores;
+
+                    // Se acertou a Questão 4, soma mais 1 ponto
+                    if (idSelecionado == radioCorreta.getId()) {
+                        acertosTotais = acertosTotais + 1;
+                    }
+
+                    // Manda o total atualizado para a Pergunta 4
+                    Intent intent = new Intent(Pergunta4.this, Pergunta5.class);
+                    intent.putExtra("PONTUACAO", acertosTotais);
+                    startActivity(intent);
+                }
+            }
+        });
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
